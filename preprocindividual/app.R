@@ -101,11 +101,14 @@ ui <- fluidPage(
   
   fluidRow(
     div(style = "padding: 10px; background-color: #f8f9fa; border-radius: 5px;",
-        p("Данная страница служит для подготовки форм: D004 Журнал учета ежеквартальных расходов и доходов домашних хозяйств,",
-          br(),
-          "D 008 Контрольная карточка состава домашнего хозяйства и весов выборки для дальнейшего анализа на странице 'Расчет индексов неравенства'. Для этого необходимо сохранить полную таблицу после расчетов нажатием на кнопку -СОХРАНИТЬ ПОЛНУЮ ТАБЛИЦУ-")
+        p("Для подготовки данных на этой странице необходимо обработать формы D004 (Журнал учета ежеквартальных расходов и доходов домашних хозяйств),", 
+          br(), 
+          "D008 (Контрольная карточка состава домашнего хозяйства) и весов выборки. После выполнения всех расчетов нажмите кнопку 'СОХРАНИТЬ ПОЛНУЮ ТАБЛИЦУ',", 
+          br(), 
+          "чтобы сохранить готовые данные. Эти данные можно будет использовать для дальнейшего анализа на странице 'Расчет индексов неравенства'.")
     )
   ),
+  
   
   sidebarLayout(
     sidebarPanel(
@@ -113,18 +116,18 @@ ui <- fluidPage(
       fileInput("income_data", "Загрузить данные о доходах"),
       fileInput("passport_data", "Загрузить контрольные данные"),
       fileInput("weights_data", "Загрузить данные о весах выборки"),
-      selectInput("survey_year_col", "Выберите столбец с годом обследования", NULL),
-      selectInput("birth_year_col", "Выберите столбец с датой рождения", NULL),
+      selectInput("survey_year_col", "Выберите столбец с информацией о годе проведения обследования", NULL),
+      selectInput("birth_year_col", "Выберите столбец с годом рождения респондентов", NULL),
       selectInput("passport_ID_col", "Выберите столбец ID в контрольных данных", NULL),
-      selectInput("exp_ID_col", "Выберите ID столбец с данными о расходах", NULL),
-      selectInput("expenses_col", "Выберите столбец с расходами", NULL),
-      selectInput("income_ID_col", "Выберите ID столбец с данными о доходах", NULL),
-      selectInput("income_category_cols", "Выберите столбец с доходами", NULL, multiple = TRUE),
-      selectInput("wt_col", "Выберите столбец с весами", NULL),
-      selectInput("weights_ID_col", "Выберите ID столбец с данными о весах", NULL),
+      selectInput("exp_ID_col", "Выберите ID столбец в данных о расходах", NULL),
+      selectInput("expenses_col", "Выберите столбец с информацией о расходах", NULL),
+      selectInput("income_ID_col", "Выберите ID столбец в данных о доходах", NULL),
+      selectInput("income_category_cols", "Выберите столбец с информацией о доходах", NULL, multiple = TRUE),
+      selectInput("wt_col", "Выберите столбец содержащий веса", NULL),
+      selectInput("weights_ID_col", "Выберите ID столбец в данных о весах", NULL),
       numericInput("threshold_age", "Выбрать пороговый возраст (14 по умолчанию)", value = 14),
-      numericInput("eta", "Коэффициент Eta", value = 0.5),
-      numericInput("theta", "Коэффициент Theta", value = 1),
+      numericInput("eta", "Коэффициент Eta (0,5 по умолчанию)", value = 0.5),
+      numericInput("theta", "Коэффициент Theta (1 по умолчанию)", value = 1),
       numericInput("quarter", "Квартал обследования", value = 1),
       actionButton("add_to_table", "Вывести расчеты (10 строк)"),
       downloadButton("downloadData", "СОХРАНИТЬ ПОЛНУЮ ТАБЛИЦУ")

@@ -5,6 +5,6 @@ account: semey
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12474628
-bundleId: 9005416
+bundleId: 9010833
 url: https://semey.shinyapps.io/preprocindividual/
 version: 1

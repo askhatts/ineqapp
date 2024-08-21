@@ -5,6 +5,6 @@ account: semey
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12474640
-bundleId: 9008755
+bundleId: 9010844
 url: https://semey.shinyapps.io/inequalityapp/
 version: 1
