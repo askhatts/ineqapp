@@ -42,7 +42,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/your-username/repository-name.git
+   git clone https://github.com/askhatts/ineqapp.git
 2. Перейдите в каталог проекта:
    ```bash
    cd repository-name
