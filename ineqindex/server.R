@@ -64,9 +64,9 @@ server <- function(input, output, session) {
     
     # Combine results into one string
     result_string <- paste(
-      "Concentration index:", round(Conc$ineq$index, 5),
-      "Gini index:", round(Gin$ineq$index, 5),
-      "Kakwani index:", round(Kkwn, 5)
+      "индекс концентрации (Concentration index):", round(Conc$ineq$index, 5),
+      "коэффициент Джини (Gini index):", round(Gin$ineq$index, 5),
+      "индекс Каквани (Kakwani index):", round(Kkwn, 5)
     )
     
     # Return result string
@@ -82,15 +82,15 @@ server <- function(input, output, session) {
     y <- dataset()[[input$y]]
     w <- dataset()[[input$w]]
     
-    df_plot <- curveConcent(x, y, w, col="red", 
+    df_plot <- curveConcent(x, y, w, col="green", 
                             xlab="совокупная доля домохозяйств, ранжированных по доходу (%)", 
                             ylab = "совокупная доля доходов и расходов (%)")
     par(new=TRUE)
-    curveLorenz(y, w, col="green")
+    curveLorenz(y, w, col="red")
     
     # Add legend
     legend("bottomright", legend=c("Кривая концентрации", "Кривая Лоренца"),
-           col=c("red", "green"), lty=1)
+           col=c("green", "red"), lty=1)
     
     }
   )

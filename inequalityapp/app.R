@@ -29,7 +29,7 @@ ui <- fluidPage(
              tags$iframe(src = "https://semey.shinyapps.io/preprocindividual/", height = "800px", width = "100%", frameborder = "0")
     ),
     tabPanel("Расчет индексов неравенства",
-             tags$iframe(src = "https://semey.shinyapps.io/kkwn/", height = "800px", width = "100%", frameborder = "0")
+             tags$iframe(src = "https://semey.shinyapps.io/ineqindex/", height = "800px", width = "100%", frameborder = "0")
     )
   ),
   
@@ -46,10 +46,6 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   # Здесь можно добавить серверную логику, если потребуется
 }
-
-# Запуск приложения
-shinyApp(ui, server)
-
 
 # Запуск приложения
 shinyApp(ui, server)

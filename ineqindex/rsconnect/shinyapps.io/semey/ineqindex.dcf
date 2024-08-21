@@ -1,10 +1,10 @@
-name: kkwn
+name: ineqindex
 title:
 username: semey
 account: semey
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 11327534
-bundleId: 9005421
-url: https://semey.shinyapps.io/kkwn/
+appId: 12482192
+bundleId: 9008723
+url: https://semey.shinyapps.io/ineqindex/
 version: 1
