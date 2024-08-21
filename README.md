@@ -43,14 +43,12 @@
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/your-username/repository-name.git
-Перейдите в каталог проекта:
-bash
-Копировать код
-cd repository-name
-Запустите приложение в R:
-r
-Копировать код
-shiny::runApp()
+2. Перейдите в каталог проекта:
+   ```bash
+   cd repository-name
+3. Запустите приложение в R:
+   ```r
+   shiny::runApp()
 Приложение также можно запустить на сервере, используя shinyapps.io или любой другой подходящий хостинг.
 
 Требования
